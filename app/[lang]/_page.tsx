@@ -13,6 +13,9 @@ export default async function IndexPage({
   return (
     <div>
       <LocaleSwitcher />
+      <h1 className="text-5xl font-bold underline">
+        Hello world!
+      </h1>
       <p>Current locale: {lang}</p>
       <p>
         This text is rendered on the server:{' '}
@@ -22,3 +25,6 @@ export default async function IndexPage({
     </div>
   )
 }
+
+
+//https://codesandbox.io/s/react-konva-multiple-selection-forked-qfxhwg

@@ -1,5 +1,8 @@
 import { i18n } from '../../i18n-config'
+import "./globals.css";
+import { store } from '@/store'
 
+import Provider from "@/provider";
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
@@ -13,7 +16,11 @@ export default function Root({
 }) {
   return (
     <html lang={params.lang}>
-      <body>{children}</body>
+      <body>
+        {/* <Provider > */}
+          {children}
+        {/* </Provider> */}
+      </body>
     </html>
   )
 }
